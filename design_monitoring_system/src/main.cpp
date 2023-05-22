@@ -19,6 +19,12 @@ Connection wires of FC-37 rain sensor:
 Blue  - to Pin A0
 Red   - to +5V
 Black - to GND
+
+Connection wires of HC-SR04 sensor:
+Pink - to pin 10 (trig)
+Cyan - to pin 9 (echo)
+Red  - to +5V
+Black- to GND
 */
 
 //definitions and initialisations for DRAMCO-UNO board
@@ -67,10 +73,10 @@ int rainPin = A0;
 int thresholdValue = 500; //adjust this value for your own desing
 
 //definitions and initialisations for HC-SR04 sensor
-const int trigPin = 9;
-const int echoPin = 10;
+const int trigPin = 10;
+const int echoPin = 9;
 long duration;
-int distance;
+float distance;
 
 //setup
 void setup()
@@ -280,7 +286,6 @@ void DS18B20_measure(void) {//--------------------------------------------------
   
  }//DS18B20_measure
   
-
 void Measure_SMT ()
    {
     float t_current, tj;
