@@ -1,0 +1,75 @@
+#######################################
+# Syntax Coloring Map For DramcoUno
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+LoraParam	KEYWORD1
+DramcoUno	KEYWORD1
+Board	KEYWORD1
+board	KEYWORD1
+DramcoUno	KEYWORD1
+Dramco_Uno	KEYWORD1
+DramcoUNO	KEYWORD1
+Dramco_UNO	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+loop	KEYWORD2
+delay	KEYWORD2
+blink	KEYWORD2
+error	KEYWORD2
+
+send	KEYWORD2
+sendWithOS	KEYWORD2
+clearMessage	KEYWORD2
+setSpreadingFactor	KEYWORD2
+setOutputPower	KEYWORD2
+setDataRate	KEYWORD2
+setADR	KEYWORD2
+
+readTemperature	KEYWORD2
+sendTemperature	KEYWORD2
+addTemperature	KEYWORD2
+addTemperatureToMessage	KEYWORD2
+
+readLuminosity	KEYWORD2
+sendLuminosity	KEYWORD2
+addLuminosity	KEYWORD2
+addLuminosityToMessage	KEYWORD2
+
+startAccelerometer	KEYWORD2
+readAccelerationX	KEYWORD2
+readAccelerationY	KEYWORD2
+readAccelerationZ	KEYWORD2
+readTemperatureAccelerometer	KEYWORD2
+addAcceleration	KEYWORD2
+addAccelerationToMessage	KEYWORD2
+sendAcceleration	KEYWORD2
+
+delayUntilShake	KEYWORD2
+delayUntilFall	KEYWORD2
+delayUntilFreeFall	KEYWORD2
+delayUntilMotion	KEYWORD2
+delayUtilMovement	KEYWORD2
+
+delayUntilButtonPress	KEYWORD2
+
+readSoilMoisture	KEYWORD2
+readSoil	KEYWORD2
+addSoilMoisture	KEYWORD2
+addSoil	KEYWORD2
+sendSoilMoisture	KEYWORD2
+sendSoil	KEYWORD2
+
+sleep	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+LED_BUITIN	LITERAL1
+ABP	LITERAL1
+OTAA	LITERAL1
