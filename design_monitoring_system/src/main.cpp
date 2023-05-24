@@ -25,6 +25,10 @@ Pink - to pin 10 (trig)
 Cyan - to pin 9 (echo)
 Red  - to +5V
 Black- to GND
+
+Connection wires of MA40S4S ultrasonic transducer:
+Purple  - to pin 8
+Black- to GND
 */
 
 //definitions and initialisations for DRAMCO-UNO board
@@ -73,10 +77,14 @@ int rainPin = A0;
 int thresholdValue = 500; //adjust this value for your own desing
 
 //definitions and initialisations for HC-SR04 sensor
-const int trigPin = 10;
-const int echoPin = 9;
+int trigPin = 10;
+int echoPin = 9;
 long duration;
 float distance;
+
+//definitions and initialisations for MA40S4S ultrasonic transducer
+#define MAX_DISTANCE 200 // Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
+int ultrasonicPin = 8;
 
 //setup
 void setup()
@@ -142,6 +150,11 @@ void loop()
   Serial.print("Distance: ");
   Serial.println(distance);
   DramcoUno.sendUltrasonic(distance);
+  
+  //ultasonic wave
+  if (distance<MAX_DISTANCE){//pest intrusion detected: reflection of ultrasonic wave by pest
+      tone(ultrasonicPin, 65000, 1000);//ultrasonic wave at 65kHz for 1 second
+  }
 
  if (millis() - mtime > set_mtime) { 
   
